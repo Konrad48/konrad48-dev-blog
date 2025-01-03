@@ -1,23 +1,131 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
 
-.heroBanner {
-  padding: 4rem 0;
+.heroText {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+/* My Projects */
+.projectsSection {
+  margin: 4rem 0;
   text-align: center;
-  position: relative;
+}
+
+.projectCards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.projectCard {
+  background: #f9fafb;
+  width: 300px;
+  border-radius: 8px;
   overflow: hidden;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.projectCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-.buttons {
+.projectCard .description {
+  padding: 1rem;
+}
+
+/* Technologies */
+.technologiesSection {
+  margin: 4rem 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.technologiesLeft {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.techIconWrapper {
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--ifm-color-primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.techIconWrapper:hover {
+  transform: scale(1.1);
+}
+
+.technologiesRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.techBigIcon {
+  font-size: 120px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-darkest);
+  transition: color 0.2s;
+}
+
+.techDescription {
+  font-size: 1.2rem;
+}
+
+/* Contact */
+.contactSection {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.contactSection a {
+  color: var(--ifm-color-primary-darkest);
+  text-decoration: underline;
 }
