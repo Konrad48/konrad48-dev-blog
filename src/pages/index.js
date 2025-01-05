@@ -10,19 +10,19 @@ export default function Home() {
       img: 'https://via.placeholder.com/300x180?text=Project+1',
       title: 'Project 1',
       description: 'Short description of Project 1',
-      link: '/docs/project1',
+      link: 'https://selliplus.com',
     },
     {
       img: 'https://via.placeholder.com/300x180?text=Project+2',
       title: 'Project 2',
       description: 'Short description of Project 2',
-      link: '/docs/project2',
+      link: 'https://selliplus.com',
     },
     {
       img: 'https://via.placeholder.com/300x180?text=Project+3',
       title: 'Project 3',
       description: 'Short description of Project 3',
-      link: '/docs/project3',
+      link: 'https://selliplus.com',
     },
   ];
 
