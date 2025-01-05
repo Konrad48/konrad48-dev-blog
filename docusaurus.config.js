@@ -15,10 +15,10 @@ const config = {
   favicon: 'img/dumpster-fire-favicon.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://konrad48.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/konrad48-dev-blog/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
