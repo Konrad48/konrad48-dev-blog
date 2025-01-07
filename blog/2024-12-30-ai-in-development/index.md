@@ -25,33 +25,35 @@ Everyone is using it in daily tasks, the question is are you using it properly? 
 
 The tasks that I give to chat can be split into 3 main parts
 
-1. Prototyping - So if I’m starting a new project, I’m outlining to chat the concept of a product that I want to build. For example an interface of a web app that will be an enchanced chatbot with a fields to fill it that will guide the user. I will then specify the tools I want to use (Nuxt, Vuetify, Typescript or javascript, vite ect.). In the prompt i’m asking it How to create it? What this does is provides me with full setup instructions on how to set up something even without specified knowledge about the dependencies. Plus it provides me with basic layouts of the pages.
+### 1. Prototyping
 
-   For example, this is the prompt i used to make simple flow visualisation app:
+So if I’m starting a new project, I’m outlining to chat the concept of a product that I want to build. For example an interface of a web app that will be an enchanced chatbot with a fields to fill it that will guide the user. I will then specify the tools I want to use (Nuxt, Vuetify, Typescript or javascript, vite ect.). In the prompt i’m asking it How to create it? What this does is provides me with full setup instructions on how to set up something even without specified knowledge about the dependencies. Plus it provides me with basic layouts of the pages.
 
-   ```jsx
-   Tell me how to create a simple app with next.js that will have a text area on the left to which user can paste a json object with a sequece, and on the right it there will appear a graphical representation in the form of the tree graph(in the way that on the top there is one component with 2 branches on botom and then to nodes). When hovered over the sequence node, the details will appear on tooltip.
-   Here is example of json sequence that will be used, (also us it as example sequence on start:
-   {
-     "id": 1,
-     "action": "welcome",
-     "message": "Welcome to our support! How can we help you today?",
-     "child_nodes": [
-       {
-         "id": 2,
-         "action": "category",
-         "message": "Is your issue related to Technical Support or Billing?",
-         "child_nodes": [
-           {
-             "id": 3,
-             "action": "technical_support",
-             "message": "Please describe your technical issue. Are you facing connectivity issues or software problems?",
-             "child_nodes": [
-       {...}// The rest of JSON example
-            ]} 
-        ]}
-    ]}
-   ```
+For example, this is the prompt i used to make simple flow visualisation app:
+
+```jsx
+Tell me how to create a simple app with next.js that will have a text area on the left to which user can paste a json object with a sequece, and on the right it there will appear a graphical representation in the form of the tree graph(in the way that on the top there is one component with 2 branches on botom and then to nodes). When hovered over the sequence node, the details will appear on tooltip.
+Here is example of json sequence that will be used, (also us it as example sequence on start:
+{
+  "id": 1,
+  "action": "welcome",
+  "message": "Welcome to our support! How can we help you today?",
+  "child_nodes": [
+    {
+      "id": 2,
+      "action": "category",
+      "message": "Is your issue related to Technical Support or Billing?",
+      "child_nodes": [
+        {
+          "id": 3,
+          "action": "technical_support",
+          "message": "Please describe your technical issue. Are you facing connectivity issues or software problems?",
+          "child_nodes": [
+    {...}// The rest of JSON example
+         ]}
+     ]}
+ ]}
+```
 
 Now, there is a problem because the context window is limited. It will not give you all the pages and all the details for every component at once. For this, I usually ask the chat additional questions about expanding the certain components, providing specific details about the functionality. This allows me to generate the code for specific component having already the context of newly created app.
 
@@ -65,8 +67,9 @@ I’d say it’s a pretty decent job, given that I only changed few lines of cod
 
 ![Result](./example3.png)
 
-2. Fixing bugs - I give to the AI are the tasks connected to solving problems and bugs within my code. Let’s say I encouner an error and I don’t understand right away why it has appeared. I’m providing in the first sentence the context of the app, and then I just copy the error and the part of the code that is causing the trouble and I will ask chat why this is happening and how can it be solved. Often times it requires more iterative approach because the first proposed solution is almost never the desired one. I keep testing the generated code and come back to chat with additional feedback. This creates the feedback loop in the conversation and It will land you the solution.
-3. Refactors and making the code readable - I often catch myself writing a spaghetti code, so the code that is long and when you come back to it, it's not so easy to understand the logic behind it.
+### 2. Fixing bugs
+
+I give to the AI are the tasks connected to solving problems and bugs within my code. Let’s say I encouner an error and I don’t understand right away why it has appeared. I’m providing in the first sentence the context of the app, and then I just copy the error and the part of the code that is causing the trouble and I will ask chat why this is happening and how can it be solved. Often times it requires more iterative approach because the first proposed solution is almost never the desired one. I keep testing the generated code and come back to chat with additional feedback. This creates the feedback loop in the conversation and It will land you the solution. 3. Refactors and making the code readable - I often catch myself writing a spaghetti code, so the code that is long and when you come back to it, it's not so easy to understand the logic behind it.
 
 ![My code before remake](./spaghetti.webp)
 

@@ -1,131 +1,161 @@
-.heroSection {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2rem;
-  background: var(--ifm-color-primary);
-  color: #fff;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.heroText {
-  flex: 1;
-  padding-right: 2rem;
-}
-
-.heroTitle {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.heroSubtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.heroImage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.heroImage img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-}
-
-/* My Projects */
-.projectsSection {
-  margin: 4rem 0;
-  text-align: center;
-}
-
-.projectCards {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.projectCard {
-  background: #f9fafb;
-  width: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: left;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.projectCard img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.projectCard .description {
-  padding: 1rem;
-}
-
-/* Technologies */
-.technologiesSection {
-  margin: 4rem 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.technologiesLeft {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.techIconWrapper {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--ifm-color-primary-light);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.techIconWrapper:hover {
-  transform: scale(1.1);
-}
-
-.technologiesRight {
-  flex: 1;
+.heroSectionNew {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #1d4ed8, #fb923c);
+  color: white;
+  border-radius: 0.75rem;
+  margin: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heroSectionNew {
+    flex-direction: row;
+  }
+}
+
+.heroTextNew {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heroTextNew {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+}
+
+.heroImageContainer {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 
-.techBigIcon {
-  font-size: 120px;
-  margin-bottom: 1rem;
-  color: var(--ifm-color-primary-darkest);
-  transition: color 0.2s;
+@media (min-width: 768px) {
+  .heroImageContainer {
+    width: 50%;
+  }
 }
 
-.techDescription {
-  font-size: 1.2rem;
+.imageWrapper {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  padding: 0.5rem;
+  border: 4px dashed white;
+  border-radius: 50%;
 }
 
-/* Contact */
-.contactSection {
-  margin: 4rem 0;
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Project Section Updates */
+.projectsSectionNew {
+  margin: 4rem 2rem;
+}
+
+.projectsTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .projectsContainer {
+    flex-direction: row;
+  }
+}
+
+.projectCard {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.projectImage {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.projectContent {
+  padding: 1rem;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.projectLink {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section Updates */
+.contactSectionNew {
+  margin: 4rem 2rem;
   text-align: center;
 }
 
-.contactSection a {
-  color: var(--ifm-color-primary-darkest);
+.contactTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contactText {
+  margin-bottom: 0.5rem;
+}
+
+.contactEmail {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.contactLink {
+  color: #2563eb;
+}
+
+.contactLink:hover {
   text-decoration: underline;
 }

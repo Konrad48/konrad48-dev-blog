@@ -17,6 +17,7 @@ import {
   } from 'react-icons/si';
 
   import { FaLink, FaMagic  } from "react-icons/fa";
+  import styles from './styles.module.css';
 
 /** A mapping of technology => brand color (or any color you like). */
 const techColors = {
@@ -42,27 +43,27 @@ const technologies = [
     {
       id: 'nuxtjs',
       icon: <SiNuxtdotjs />,
-      description: 'Nuxt.js for building server-side rendered Vue apps easily.',
+      description: 'Nuxt.js for quickly building MVPs and scalable applications, that require server-side rendering or static site generation.',
     },
     {
       id: 'vuejs',
       icon: <SiVuedotjs />,
-      description: 'Vue.js for approachable, versatile front-end development.',
+      description: 'Vue.js is my go-to library for building UIs.',
     },
     {
       id: 'react',
       icon: <SiReact />,
-      description: 'React is my go-to library for building UIs quickly.',
+      description: 'I also create apps with React if the project requires ir',
     },
     {
       id: 'javascript',
       icon: <SiJavascript />,
-      description: 'JavaScript for client-side logic and dynamic experiences.',
+      description: 'If the project is small I go with vanilla JavaScript.',
     },
     {
       id: 'typescript',
       icon: <SiTypescript />,
-      description: 'TypeScript for safer and more scalable JavaScript.',
+      description: 'I use TypeScript in more complex projects to improve maintainability of the code.',
     },
     {
       id: 'npm',
@@ -72,22 +73,22 @@ const technologies = [
     {
       id: 'php',
       icon: <SiPhp />,
-      description: 'PHP for server-side scripting and rapid web prototyping.',
+      description: "PHP for building API's",
     },
     {
       id: 'laravel',
       icon: <SiLaravel />,
-      description: 'Laravel for elegant PHP frameworks with built-in tooling.',
+      description: 'Laravel is a mature frameowork that I use in 99% of my PHP projects. It is very well documented and has a large librarie\'s ecosystem. It is also very well supported by the  community.',
     },
     {
       id: 'stripe',
       icon: <SiStripe />,
-      description: 'Stripe for secure and flexible payment solutions.',
+      description: 'Stripe for secure and flexible payment solutions. It is easiest to implement and scale later.',
     },
     {
       id: 'digitalocean',
       icon: <SiDigitalocean />,
-      description: 'DigitalOcean for scalable, developer-friendly hosting.',
+      description: 'DigitalOcean for scalable and affordable cloud  hosting.',
     },
     {
       id: 'docker',
@@ -101,50 +102,44 @@ const technologies = [
     },
     {
       id: 'openai',
-      icon: <SiOpenai />, // Will only work if your react-icons version includes SiOpenai
+      icon: <SiOpenai />,
       description: 'OpenAI for state-of-the-art language models and AI solutions.',
     },
     {
       id: 'anthropic',
       icon: <FaMagic />,
-      description: 'Anthropic for cutting-edge large language models and research.',
+      description: 'Anthropic for content and text generation.',
     },
     {
       id: 'langchain',
       icon: <FaLink />,
-      description: 'LangChain for building advanced apps around LLMs and AI workflows.',
+      description: 'LangChain for building advanced apps around LLMs, AI workflows, AI chatbots, RAGs and Agents.',
     },
   ];
 
   export default function TechnologiesSection() {
     const [hoveredTech, setHoveredTech] = useState(null);
   
-    // Find the tech being hovered, or default to the first item if none
     const currentTech = technologies.find((t) => t.id === hoveredTech) || technologies[0];
-    const currentColor = techColors[currentTech.id] || '#9ca3af'; // fallback gray
+    const currentColor = techColors[currentTech.id] || '#9ca3af';
   
     return (
-      <section className="my-16 mx-8">
-        <h2 className="text-3xl font-bold text-center mb-8">
+      <section className={styles.section}>
+        <h2 className={styles.title}>
           I use these technologies in my projects
         </h2>
   
-        {/* 
-          We align items at the start so that if the right side grows in 
-          height, the grid on the left doesn't shift.
-        */}
-        <div className="flex flex-col md:flex-row items-start justify-center gap-8">
+        <div className={styles.container}>
           {/* Tech icons (left) */}
-          <div className="grid grid-cols-5 gap-4 text-4xl text-gray-400 md:w-1/2 justify-items-center">
+          <div className={styles.techGrid}>
             {technologies.map((tech) => {
               const isHovered = hoveredTech === tech.id;
-              const color = isHovered ? techColors[tech.id] : '#9ca3af'; // #9ca3af is gray-400
+              const color = isHovered ? techColors[tech.id] : '#9ca3af';
               return (
                 <div
                   key={tech.id}
                   onMouseEnter={() => setHoveredTech(tech.id)}
-                  // No onMouseLeave => stays on last hovered
-                  className="cursor-pointer transition-colors"
+                  className={styles.techIcon}
                   style={{ color }}
                 >
                   {tech.icon}
@@ -154,16 +149,14 @@ const technologies = [
           </div>
   
           {/* Big icon + description (right) */}
-          <div className="flex flex-col items-center md:w-1/2">
-            {/* Big icon */}
+          <div className={styles.previewContainer}>
             <div
-              className="text-9xl mb-4 transition-colors"
+              className={styles.bigIcon}
               style={{ color: currentColor }}
             >
               {currentTech.icon}
             </div>
-            {/* Description */}
-            <div className="text-xl text-center max-w-md">
+            <div className={styles.description}>
               {currentTech.description}
             </div>
           </div>
