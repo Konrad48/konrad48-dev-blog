@@ -13,7 +13,7 @@ In this post I will show you how I leverage Generative AI tools to help build so
 
 ## ChatGPT
 
-Everyone is using it in daily tasks, the question is are you using it properly? I’m a hardcore user myself and it helped me a lot during my projects. I’m paying for a plus subscription, so about $25/mo, but it’s worth it in my opinion because you get access to latest models like o1 that totally outperforms the previous ones, plus you get access to models fine-tuned for certain frameworks and languages. If i’m not satisfied with the output, I’m often switching to a different ones and testing. I found most useful the following ones:
+Everyone is using it in daily tasks, the question is are you using it properly? I’m a hardcore user myself and it helped me a lot during my projects. I’m paying for a plus subscription, so about $25/mo, but it’s worth it in my opinion, because you get access to latest models like o1 that totally outperforms the previous ones, plus you get access to models fine-tuned for certain frameworks and languages. If i’m not satisfied with the output, I’m often switching to a different ones and testing. I found most useful the following ones:
 
 - ChatGPT o1 - for general help in things i’m not proficient like DevOps, deployment, or a major refactors of the code
 - [Laravel GPT](https://chatgpt.com/g/g-XTOuIQ6Tz-laravel-gpt) - Since I develop my backends mostly in Laravel, it’s perfect for creating Models, Migrations, Policies and basic Controllers
@@ -81,7 +81,7 @@ ChatGPT helps to split the code into more methods, classes and simplifies some p
 
 ## Continue
 
-[Continue](https://www.continue.dev/) is an extension that you can install in your VS Code or your JetBrains IDE. It’s like GitHub Copilot but you are in charge of the models you use. It hes 2 main functions
+[Continue](https://www.continue.dev/) is an extension that you can install in your VS Code or your JetBrains IDE. It’s like GitHub Copilot but you are in charge of the models you use. I have also tried Amazon Whisper and Github copilot but was not really convinced. This one actuallly does the job. It has 2 main functions
 
 1. Autocomple that will basically complete your code as you write or generate code based on your comment.
 2. Chat functionality that can be aware of your codebase
@@ -96,6 +96,6 @@ Now this extension requires some setup. You need to register with your preffered
 
 ![Models available in Continue](./models_continue.gif)
 
-Those tools help me develop things on 5x speed, and don’t waste time on repetitive tasks, searching for solutions on forums or reading the docs. Of course those actions are still necessary sometimes but I find myself doing it less, and only in the really hard cases.
+Those tools help me develop things much faster, and don’t waste time on repetitive tasks, searching for solutions on forums or reading the docs. Of course those actions are still necessary sometimes but I find myself doing it less, and only in the really hard cases.
 
 I will probably experiment with other models for the extension and update this article
