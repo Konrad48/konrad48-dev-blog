@@ -69,7 +69,11 @@ I’d say it’s a pretty decent job, given that I only changed few lines of cod
 
 ### 2. Fixing bugs
 
-I give to the AI are the tasks connected to solving problems and bugs within my code. Let’s say I encouner an error and I don’t understand right away why it has appeared. I’m providing in the first sentence the context of the app, and then I just copy the error and the part of the code that is causing the trouble and I will ask chat why this is happening and how can it be solved. Often times it requires more iterative approach because the first proposed solution is almost never the desired one. I keep testing the generated code and come back to chat with additional feedback. This creates the feedback loop in the conversation and It will land you the solution. 3. Refactors and making the code readable - I often catch myself writing a spaghetti code, so the code that is long and when you come back to it, it's not so easy to understand the logic behind it.
+I give to the AI are the tasks connected to solving problems and bugs within my code. Let’s say I encouner an error and I don’t understand right away why it has appeared. I’m providing in the first sentence the context of the app, and then I just copy the error and the part of the code that is causing the trouble and I will ask chat why this is happening and how can it be solved. Often times it requires more iterative approach because the first proposed solution is almost never the desired one. I keep testing the generated code and come back to chat with additional feedback. This creates the feedback loop in the conversation and It will land you the solution.
+
+### 3. Refactors and making the code readable
+
+I often catch myself writing a spaghetti code, so the code that is long and when you come back to it, it's not so easy to understand the logic behind it.
 
 ![My code before remake](./spaghetti.webp)
 
