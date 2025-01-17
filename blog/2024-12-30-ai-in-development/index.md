@@ -81,7 +81,7 @@ ChatGPT helps to split the code into more methods, classes and simplifies some p
 
 ## Continue
 
-[Continue](https://www.continue.dev/) is an extension that you can install in your VS Code or your JetBrains IDE. It’s like GitHub Copilot but you are in charge of the models you use. I have also tried Amazon Whisper and Github copilot but was not really convinced. This one actuallly does the job. It has 2 main functions
+[Continue](https://www.continue.dev/) is an extension that you can install in your VS Code or your JetBrains IDE. It’s like GitHub Copilot but you are in charge of the models you use. I have also tried Amazon Whisper and Github copilot but was not really convinced. I gave this one a try after [xBartM](https://github.com/xBartM) introduced it to me and it actuallly does the job. It has 2 main functions
 
 1. Autocomple that will basically complete your code as you write or generate code based on your comment.
 2. Chat functionality that can be aware of your codebase
