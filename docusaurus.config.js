@@ -82,7 +82,13 @@ const config = {
           src: 'img/dumpster-fire.png',
         },
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Tutorial',
+          },
+          {to: '/docs', label: 'Knowledge base', position: 'left'},
         ],
       },
       footer: {
