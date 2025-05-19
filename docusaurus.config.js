@@ -86,9 +86,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Knowledge base',
           },
-          {to: '/docs', label: 'Knowledge base', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
