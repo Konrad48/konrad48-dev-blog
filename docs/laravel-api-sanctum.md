@@ -222,3 +222,5 @@ Now you can run your application using `php artisan serve`
 ## Testing the API
 Now you can try it out using Postman or any other API testing tool.
 
+You can also add documentation to your API using Scramble: https://scramble.dedoc.co/installation
+
